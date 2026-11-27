@@ -89,7 +89,7 @@
   },
   {
     "path": "experiments/transolver_lab/publication_report.py",
-    "sha256": "7d695d74484a836110254e2e5b5bb38dd53df539449b38eda15e06f8204bccbf"
+    "sha256": "4d98259e7c6f9640fc8a242a3fe54b1c29fdf340a600800e2a4f445c33bb96ea"
   },
   {
     "path": "experiments/transolver_lab/cuda/physics_attention_kernel.cu",
@@ -212,8 +212,24 @@
     "sha256": "3f7311258f6477d359c9b23629e4aa7856def402bf59ff37e09f5307a17caea8"
   },
   {
+    "path": "experiments/transolver_lab/evidence/publication/summary.json",
+    "sha256": "17b7e763d407257ec3cca364b7b051e83007da32a09b3118c4ba7cc776e76e5d"
+  },
+  {
     "path": "experiments/transolver_lab/evidence/publication/provenance.json",
     "sha256": "e27dcfd7d5d0a4251939dbac94b911bdc4a247186dffe39b87100ae7a0b07b2a"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/publication/results.json",
+    "sha256": "947e4f7868d83bb4d89eb288854e1e210fc849f0dfedf3f1ba31d7a0fafc6703"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/publication/table.md",
+    "sha256": "e4a813653bb79162dc5ff2976a4064273ac99e13b4cde6e433de6a498b437907"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/publication/SHA256SUMS",
+    "sha256": "ce19a334790acd795f43b0150acd1c6ba2cde7e97e19188bdea6e9cef59c3ac1"
   },
   {
     "path": "experiments/transolver_lab/evidence/viewer/aero-pressure.png",
@@ -261,7 +277,11 @@
   },
   {
     "path": "docs/papers/p2i_l2_tiled_transolver_whitepaper.md",
-    "sha256": "ae61cef27136b7dd47b39a1e5a9037b76e6144dca170ed01c8b15fa9c86d3ac6"
+    "sha256": "1d776c28c6e577cd9eece82726f3920e4478d2e4397a4b680b048ca4a2ed6050"
+  },
+  {
+    "path": "docs/papers/arxiv/main.pdf",
+    "sha256": "be62468e2a401c6ce1872102f69b5e91babc9fd0f0f2df3a18b6147aba47021f"
   },
   {
     "path": "docs/papers/arxiv/aero-pressure.png",
@@ -269,14 +289,62 @@
   },
   {
     "path": "docs/papers/arxiv/main.tex",
-    "sha256": "b12275a4858f0449c96c140ff68202b4bbb24a2e142a42794269c39473abf326"
+    "sha256": "e7869f723ce5969f0f8ad2c5bf5beecb228dac5c2ab636718ecff8cacb9be031"
+  },
+  {
+    "path": "docs/papers/arxiv/README.md",
+    "sha256": "0c27c0145c10865611913c57e0c40a50e11e60c68cccb62724232e36929765db"
   },
   {
     "path": "docs/papers/arxiv/manuscript.md",
-    "sha256": "f7257d420eaf956e40118b6f40adcde0d9e252479b4fcf74393edcf3cb1b7da2"
+    "sha256": "aa5b2fff648f46fd7d78d567fdacc4406e63e1f125fe0e271826038cf68ac4d1"
   },
   {
     "path": "docs/papers/arxiv/aero-cut.png",
     "sha256": "0387e0f6d656340c528c890fa34d66c9fc306e0a0d14a55a93d58a97ccd6ca36"
+  },
+  {
+    "path": "docs/papers/arxiv/benchmark.png",
+    "sha256": "b0619d8dc64ec3be94883a738e8320b87eecec031d05a21b6d44c9a5559b3ffa"
+  },
+  {
+    "path": "docs/papers/arxiv/NOTICE.md",
+    "sha256": "76cb013c4df134beaf7d58a4459bf1da2b0e6973bedce26ccbb61117fbe53a06"
+  },
+  {
+    "path": "experiments/transolver_lab/README.md",
+    "sha256": "d65f05d42c3d66c273aa18ffa19c025e267aa36d5560b399887b34fdf9f0c2d6"
+  },
+  {
+    "path": "docs/checkpoints/2026-11-27-transolver-publication.md",
+    "sha256": "a7909a5e01e454b2bc6a7895f83c003dc73dcac10873d2a6ce5a86529854afc7"
+  },
+  {
+    "path": "docs/papers/p2i-transolver-arxiv-source.zip",
+    "sha256": "9cbd80bba4029a532f0a99191a2bf469ba5ab8bbcd50f11f36b51db90fff7b9d"
+  },
+  {
+    "path": "tools/release/build_transolver_paper.py",
+    "sha256": "b569df4695b84ca552651be01f69a4a8b10e9494964e6d8ad621a50ea2588feb"
+  },
+  {
+    "path": "tools/release/package_transolver.py",
+    "sha256": "a7c937b2531ee35ab0625969959865bde3af713f66b893238542fd5b60c018b8"
+  },
+  {
+    "path": "tools/release/transolver-README.md",
+    "sha256": "6468d8fa7f93d36d2b4971156ac08c1a2a3c37ee9432a74177fff6c6f7019007"
+  },
+  {
+    "path": "tools/release/plot_transolver.py",
+    "sha256": "7e721a115cc38579da5c1b3125496e2fd4a2839d3af5d2cbcab37fc033cc76b8"
+  },
+  {
+    "path": "tools/release/transolver-LICENSE",
+    "sha256": "f921b454f136cb83b0d78fd9da606c8c54c681fcfd1e8464d17b7bc074e02e77"
+  },
+  {
+    "path": "tools/release/transolver-NOTICE.md",
+    "sha256": "76cb013c4df134beaf7d58a4459bf1da2b0e6973bedce26ccbb61117fbe53a06"
   }
 ]

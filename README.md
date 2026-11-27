@@ -4,6 +4,8 @@ Reproducible, bounded-memory inference for NVIDIA's pretrained DrivAerML surface
 Transolver. Research engineering by Krishna Srinivasamurthy / Power2Idea Lab.
 
 **Release candidate for review, not a claim of state-of-the-art performance.**
+The five-repeat test also observes increasing V3 allocator peaks; persistent
+service memory behavior has not been established.
 See the [technical report](docs/papers/p2i_l2_tiled_transolver_whitepaper.md) and
 [publication benchmark evidence](experiments/transolver_lab/evidence/publication/).
 

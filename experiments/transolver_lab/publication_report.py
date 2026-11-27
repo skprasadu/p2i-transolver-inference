@@ -31,6 +31,9 @@ def render():
             shear_l2_percent=max(s["shear_l2_percent"] for s in samples),
         )
         summaries.append(summary)
+    assert {(r["case"], r["mode"]) for r in summaries} == {
+        (c, m) for c in (4, 17, 18) for m in ("fp32", "tf32", "v3")
+    }, "Incomplete publication matrix"
     summaries.sort(key=lambda r: (r["case"], ["fp32", "tf32", "v3"].index(r["mode"])))
     for r in summaries:
         base = next(
@@ -61,8 +64,10 @@ it does not claim additional sanitizer coverage on cases 17 and 18.
 
 Memory columns use the maximum over all five repetitions, including graph-pool
 behavior across repeated runs. They must not be replaced by the smaller first-pass
-numbers. These runs test repeatability within one GPU allocation, not variability
-across independent GPU hosts. Per-repetition measurements and standard deviations
+numbers. These runs test repeatability within each method process. A disconnected job was
+resumed in a second H100 allocation, retaining completed configurations; hardware
+identity across that boundary was not recorded. This is not a systematic
+cross-host variability study. Per-repetition measurements and standard deviations
 are available in the accompanying JSON files.
 
 Globally enabling TF32 is a distinct accuracy/performance trade-off, not automatically

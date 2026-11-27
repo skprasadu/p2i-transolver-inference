@@ -1,0 +1,446 @@
+{
+  "reports": [
+    {
+      "case": 4,
+      "mode": "fp32",
+      "vertices": 8150920,
+      "cells": 8140177,
+      "partition": 200000,
+      "seed": 42,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "torch": "2.10.0+cu128",
+      "samples": [
+        {
+          "latency_ms": 20761.265506999993,
+          "peak_allocated_mb": 10992.239616,
+          "peak_reserved_mb": 11427.381248,
+          "pressure_l2_percent": 3.3943987088424237,
+          "shear_l2_percent": 6.266734639903738
+        },
+        {
+          "latency_ms": 20760.094702999922,
+          "peak_allocated_mb": 10992.239616,
+          "peak_reserved_mb": 11427.381248,
+          "pressure_l2_percent": 3.3943987088424237,
+          "shear_l2_percent": 6.266734639903738
+        },
+        {
+          "latency_ms": 20734.37535099991,
+          "peak_allocated_mb": 10992.239616,
+          "peak_reserved_mb": 11427.381248,
+          "pressure_l2_percent": 3.3943987088424237,
+          "shear_l2_percent": 6.266734639903738
+        },
+        {
+          "latency_ms": 20733.62101100006,
+          "peak_allocated_mb": 10992.239616,
+          "peak_reserved_mb": 11427.381248,
+          "pressure_l2_percent": 3.3943987088424237,
+          "shear_l2_percent": 6.266734639903738
+        },
+        {
+          "latency_ms": 20737.494474999952,
+          "peak_allocated_mb": 10992.239616,
+          "peak_reserved_mb": 11427.381248,
+          "pressure_l2_percent": 3.3943987088424237,
+          "shear_l2_percent": 6.266734639903738
+        }
+      ],
+      "scope": "Indexing+forward; per-shape warmup excluded; five sequential repetitions; fresh process per case/mode",
+      "precision": "fp32"
+    },
+    {
+      "case": 4,
+      "mode": "tf32",
+      "vertices": 8150920,
+      "cells": 8140177,
+      "partition": 200000,
+      "seed": 42,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "torch": "2.10.0+cu128",
+      "samples": [
+        {
+          "latency_ms": 12612.138348999992,
+          "peak_allocated_mb": 10992.239616,
+          "peak_reserved_mb": 11427.381248,
+          "pressure_l2_percent": 3.6263303272137652,
+          "shear_l2_percent": 6.808969323433861
+        },
+        {
+          "latency_ms": 12612.959779999925,
+          "peak_allocated_mb": 10992.239616,
+          "peak_reserved_mb": 11427.381248,
+          "pressure_l2_percent": 3.6263303272137652,
+          "shear_l2_percent": 6.808969323433861
+        },
+        {
+          "latency_ms": 12614.893639000087,
+          "peak_allocated_mb": 10992.239616,
+          "peak_reserved_mb": 11427.381248,
+          "pressure_l2_percent": 3.6263303272137652,
+          "shear_l2_percent": 6.808969323433861
+        },
+        {
+          "latency_ms": 12615.17476499978,
+          "peak_allocated_mb": 10992.239616,
+          "peak_reserved_mb": 11427.381248,
+          "pressure_l2_percent": 3.6263303272137652,
+          "shear_l2_percent": 6.808969323433861
+        },
+        {
+          "latency_ms": 12617.385690999867,
+          "peak_allocated_mb": 10992.239616,
+          "peak_reserved_mb": 11427.381248,
+          "pressure_l2_percent": 3.6263303272137652,
+          "shear_l2_percent": 6.808969323433861
+        }
+      ],
+      "scope": "Indexing+forward; per-shape warmup excluded; five sequential repetitions; fresh process per case/mode",
+      "precision": "TF32 allowed globally"
+    },
+    {
+      "case": 4,
+      "mode": "v3",
+      "vertices": 8150920,
+      "cells": 8140177,
+      "partition": 200000,
+      "seed": 42,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "torch": "2.10.0+cu128",
+      "samples": [
+        {
+          "latency_ms": 17759.342825999847,
+          "peak_allocated_mb": 2252.229632,
+          "peak_reserved_mb": 4640.997376,
+          "pressure_l2_percent": 3.3941697359325964,
+          "shear_l2_percent": 6.267464112446281
+        },
+        {
+          "latency_ms": 17805.75540000001,
+          "peak_allocated_mb": 2322.156544,
+          "peak_reserved_mb": 4794.089472,
+          "pressure_l2_percent": 3.3941697359325964,
+          "shear_l2_percent": 6.267464112446281
+        },
+        {
+          "latency_ms": 17805.007367999966,
+          "peak_allocated_mb": 2391.36256,
+          "peak_reserved_mb": 4865.39264,
+          "pressure_l2_percent": 3.3941697359325964,
+          "shear_l2_percent": 6.267464112446281
+        },
+        {
+          "latency_ms": 17790.37057199992,
+          "peak_allocated_mb": 2460.568576,
+          "peak_reserved_mb": 4936.695808,
+          "pressure_l2_percent": 3.3941697359325964,
+          "shear_l2_percent": 6.267464112446281
+        },
+        {
+          "latency_ms": 17815.440768000084,
+          "peak_allocated_mb": 2529.774592,
+          "peak_reserved_mb": 5007.998976,
+          "pressure_l2_percent": 3.3941697359325964,
+          "shear_l2_percent": 6.267464112446281
+        }
+      ],
+      "scope": "Indexing+forward; per-shape warmup excluded; five sequential repetitions; fresh process per case/mode",
+      "precision": "v3"
+    },
+    {
+      "case": 17,
+      "mode": "tf32",
+      "vertices": 9705704,
+      "cells": 9680746,
+      "partition": 200000,
+      "seed": 42,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "torch": "2.10.0+cu128",
+      "samples": [
+        {
+          "latency_ms": 15014.443673999775,
+          "peak_allocated_mb": 11042.131968,
+          "peak_reserved_mb": 11530.141696,
+          "pressure_l2_percent": 3.2896154147527517,
+          "shear_l2_percent": 6.702571723914606
+        },
+        {
+          "latency_ms": 15009.298,
+          "peak_allocated_mb": 11042.131968,
+          "peak_reserved_mb": 11530.141696,
+          "pressure_l2_percent": 3.2896154147527517,
+          "shear_l2_percent": 6.702571723914606
+        },
+        {
+          "latency_ms": 15010.581396999893,
+          "peak_allocated_mb": 11042.131968,
+          "peak_reserved_mb": 11530.141696,
+          "pressure_l2_percent": 3.2896154147527517,
+          "shear_l2_percent": 6.702571723914606
+        },
+        {
+          "latency_ms": 15006.820451999829,
+          "peak_allocated_mb": 11042.131968,
+          "peak_reserved_mb": 11530.141696,
+          "pressure_l2_percent": 3.2896154147527517,
+          "shear_l2_percent": 6.702571723914606
+        },
+        {
+          "latency_ms": 15004.765924999669,
+          "peak_allocated_mb": 11042.131968,
+          "peak_reserved_mb": 11530.141696,
+          "pressure_l2_percent": 3.2896154147527517,
+          "shear_l2_percent": 6.702571723914606
+        }
+      ],
+      "scope": "Indexing+forward; per-shape warmup excluded; five sequential repetitions; fresh process per case/mode",
+      "precision": "TF32 allowed globally"
+    },
+    {
+      "case": 17,
+      "mode": "v3",
+      "vertices": 9705704,
+      "cells": 9680746,
+      "partition": 200000,
+      "seed": 42,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "torch": "2.10.0+cu128",
+      "samples": [
+        {
+          "latency_ms": 21211.343525000037,
+          "peak_allocated_mb": 2302.121984,
+          "peak_reserved_mb": 4687.13472,
+          "pressure_l2_percent": 3.02365127482254,
+          "shear_l2_percent": 6.202244520008997
+        },
+        {
+          "latency_ms": 21246.05297099998,
+          "peak_allocated_mb": 2371.328,
+          "peak_reserved_mb": 4758.437888,
+          "pressure_l2_percent": 3.02365127482254,
+          "shear_l2_percent": 6.202244520008997
+        },
+        {
+          "latency_ms": 21313.10963499996,
+          "peak_allocated_mb": 2440.534016,
+          "peak_reserved_mb": 4829.741056,
+          "pressure_l2_percent": 3.02365127482254,
+          "shear_l2_percent": 6.202244520008997
+        },
+        {
+          "latency_ms": 21309.000657000066,
+          "peak_allocated_mb": 2509.740032,
+          "peak_reserved_mb": 4901.044224,
+          "pressure_l2_percent": 3.02365127482254,
+          "shear_l2_percent": 6.202244520008997
+        },
+        {
+          "latency_ms": 21305.239983999913,
+          "peak_allocated_mb": 2578.946048,
+          "peak_reserved_mb": 4972.347392,
+          "pressure_l2_percent": 3.02365127482254,
+          "shear_l2_percent": 6.202244520008997
+        }
+      ],
+      "scope": "Indexing+forward; per-shape warmup excluded; five sequential repetitions; fresh process per case/mode",
+      "precision": "v3"
+    },
+    {
+      "case": 17,
+      "mode": "fp32",
+      "vertices": 9705704,
+      "cells": 9680746,
+      "partition": 200000,
+      "seed": 42,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "torch": "2.10.0+cu128",
+      "samples": [
+        {
+          "latency_ms": 24842.099534000055,
+          "peak_allocated_mb": 11042.131968,
+          "peak_reserved_mb": 11530.141696,
+          "pressure_l2_percent": 3.024468119441374,
+          "shear_l2_percent": 6.202553706711783
+        },
+        {
+          "latency_ms": 24842.659870000036,
+          "peak_allocated_mb": 11042.131968,
+          "peak_reserved_mb": 11530.141696,
+          "pressure_l2_percent": 3.024468119441374,
+          "shear_l2_percent": 6.202553706711783
+        },
+        {
+          "latency_ms": 24844.037754000306,
+          "peak_allocated_mb": 11042.131968,
+          "peak_reserved_mb": 11530.141696,
+          "pressure_l2_percent": 3.024468119441374,
+          "shear_l2_percent": 6.202553706711783
+        },
+        {
+          "latency_ms": 24843.42465800001,
+          "peak_allocated_mb": 11042.131968,
+          "peak_reserved_mb": 11530.141696,
+          "pressure_l2_percent": 3.024468119441374,
+          "shear_l2_percent": 6.202553706711783
+        },
+        {
+          "latency_ms": 24844.71869299994,
+          "peak_allocated_mb": 11042.131968,
+          "peak_reserved_mb": 11530.141696,
+          "pressure_l2_percent": 3.024468119441374,
+          "shear_l2_percent": 6.202553706711783
+        }
+      ],
+      "scope": "Indexing+forward; per-shape warmup excluded; five sequential repetitions; fresh process per case/mode",
+      "precision": "fp32"
+    },
+    {
+      "case": 18,
+      "mode": "v3",
+      "vertices": 7320829,
+      "cells": 7315999,
+      "partition": 200000,
+      "seed": 42,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "torch": "2.10.0+cu128",
+      "samples": [
+        {
+          "latency_ms": 16034.615996000013,
+          "peak_allocated_mb": 2226.624512,
+          "peak_reserved_mb": 4611.637248,
+          "pressure_l2_percent": 5.78184127952668,
+          "shear_l2_percent": 8.415019504145556
+        },
+        {
+          "latency_ms": 16062.656128999943,
+          "peak_allocated_mb": 2296.551424,
+          "peak_reserved_mb": 4716.494848,
+          "pressure_l2_percent": 5.78184127952668,
+          "shear_l2_percent": 8.415019504145556
+        },
+        {
+          "latency_ms": 16101.698668000041,
+          "peak_allocated_mb": 2365.75744,
+          "peak_reserved_mb": 4787.798016,
+          "pressure_l2_percent": 5.78184127952668,
+          "shear_l2_percent": 8.415019504145556
+        },
+        {
+          "latency_ms": 16110.213615000137,
+          "peak_allocated_mb": 2434.963456,
+          "peak_reserved_mb": 4859.101184,
+          "pressure_l2_percent": 5.78184127952668,
+          "shear_l2_percent": 8.415019504145556
+        },
+        {
+          "latency_ms": 16094.762002000154,
+          "peak_allocated_mb": 2504.169472,
+          "peak_reserved_mb": 4930.404352,
+          "pressure_l2_percent": 5.78184127952668,
+          "shear_l2_percent": 8.415019504145556
+        }
+      ],
+      "scope": "Indexing+forward; per-shape warmup excluded; five sequential repetitions; fresh process per case/mode",
+      "precision": "v3"
+    },
+    {
+      "case": 18,
+      "mode": "fp32",
+      "vertices": 7320829,
+      "cells": 7315999,
+      "partition": 200000,
+      "seed": 42,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "torch": "2.10.0+cu128",
+      "samples": [
+        {
+          "latency_ms": 18713.47154799997,
+          "peak_allocated_mb": 10966.634496,
+          "peak_reserved_mb": 11360.272384,
+          "pressure_l2_percent": 5.782420123037087,
+          "shear_l2_percent": 8.415443647620283
+        },
+        {
+          "latency_ms": 18709.31533900006,
+          "peak_allocated_mb": 10966.634496,
+          "peak_reserved_mb": 11360.272384,
+          "pressure_l2_percent": 5.782420123037087,
+          "shear_l2_percent": 8.415443647620283
+        },
+        {
+          "latency_ms": 18709.390302000087,
+          "peak_allocated_mb": 10966.634496,
+          "peak_reserved_mb": 11360.272384,
+          "pressure_l2_percent": 5.782420123037087,
+          "shear_l2_percent": 8.415443647620283
+        },
+        {
+          "latency_ms": 18710.114591999965,
+          "peak_allocated_mb": 10966.634496,
+          "peak_reserved_mb": 11360.272384,
+          "pressure_l2_percent": 5.782420123037087,
+          "shear_l2_percent": 8.415443647620283
+        },
+        {
+          "latency_ms": 18712.55385899997,
+          "peak_allocated_mb": 10966.634496,
+          "peak_reserved_mb": 11360.272384,
+          "pressure_l2_percent": 5.782420123037087,
+          "shear_l2_percent": 8.415443647620283
+        }
+      ],
+      "scope": "Indexing+forward; per-shape warmup excluded; five sequential repetitions; fresh process per case/mode",
+      "precision": "fp32"
+    },
+    {
+      "case": 18,
+      "mode": "tf32",
+      "vertices": 7320829,
+      "cells": 7315999,
+      "partition": 200000,
+      "seed": 42,
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "torch": "2.10.0+cu128",
+      "samples": [
+        {
+          "latency_ms": 11463.145258000168,
+          "peak_allocated_mb": 10966.634496,
+          "peak_reserved_mb": 11360.272384,
+          "pressure_l2_percent": 5.943229496723685,
+          "shear_l2_percent": 8.848373258941503
+        },
+        {
+          "latency_ms": 11461.877380999907,
+          "peak_allocated_mb": 10966.634496,
+          "peak_reserved_mb": 11360.272384,
+          "pressure_l2_percent": 5.943229496723685,
+          "shear_l2_percent": 8.848373258941503
+        },
+        {
+          "latency_ms": 11460.471581999627,
+          "peak_allocated_mb": 10966.634496,
+          "peak_reserved_mb": 11360.272384,
+          "pressure_l2_percent": 5.943229496723685,
+          "shear_l2_percent": 8.848373258941503
+        },
+        {
+          "latency_ms": 11461.284325999597,
+          "peak_allocated_mb": 10966.634496,
+          "peak_reserved_mb": 11360.272384,
+          "pressure_l2_percent": 5.943229496723685,
+          "shear_l2_percent": 8.848373258941503
+        },
+        {
+          "latency_ms": 11461.457594000762,
+          "peak_allocated_mb": 10966.634496,
+          "peak_reserved_mb": 11360.272384,
+          "pressure_l2_percent": 5.943229496723685,
+          "shear_l2_percent": 8.848373258941503
+        }
+      ],
+      "scope": "Indexing+forward; per-shape warmup excluded; five sequential repetitions; fresh process per case/mode",
+      "precision": "TF32 allowed globally"
+    }
+  ],
+  "existing_kernel": "unchanged v3; prior scoped sanitizer evidence retained"
+}

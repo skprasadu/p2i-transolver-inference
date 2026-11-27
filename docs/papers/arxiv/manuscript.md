@@ -1,11 +1,6 @@
-\begin{abstract}
+## Abstract
 
-The following abstract summarizes the original run-4 checkpoint; the publication-validation section reports the subsequent repeated, three-case evaluation.
-
-
-We evaluate bounded-memory inference for NVIDIA's pretrained Transolver surface model on DrivAerML run 4, containing 8,150,920 mesh vertices and 8,140,177 cell-centered inputs. On a Modal-hosted NVIDIA H100 80 GB, tiled physics-attention with selective TF32 matrix multiplication and a shared CUDA graph reduces a warmed complete-case inference from 20,796.695 to 17,699.752 ms (1.17497×). Peak PyTorch allocated memory decreases from 10,992.240 to 2,252.230 MB (79.51%); peak reserved memory decreases from 11,427.381 to 4,640.997 MB. Pressure relative L2 error against the existing reference CFD reference is 3.394170%, compared with 3.394399% for unchanged FP32 inference. Five scoped Compute Sanitizer processes report zero memory errors. A protected Trame/VTK EGL viewer renders the full, undecimated surface, with one measured server-side cutaway update of 109.633 ms on a T4. These results establish a reproducible inference and inspection capability, not a new CFD solver, a globally coupled eight-million-token inference, or improved aerodynamic fidelity.
-
-\end{abstract}
+We evaluate memory-efficient inference for NVIDIA's pretrained Transolver surface model on three preselected DrivAerML validation cases, using identical 200,000-cell partitions and unchanged trained weights. Five complete-case repetitions per method on H100 GPUs compare strict FP32 PyTorch, globally TF32-enabled PyTorch and tiled physics-attention with selective TF32 and a shared CUDA graph. The tiled implementation achieves 1.162–1.166× median speedup and 76.6–77.2% lower peak allocated memory versus strict FP32. Its pressure relative L2 errors against time-averaged reference CFD are 3.39417%, 3.02365% and 5.78184%; all pass the predeclared accuracy allowances relative to FP32. Global TF32 is faster but fails those allowances on all three cases. Allocated memory increases across repeated tiled runs, so a fixed persistent-serving footprint is not established. The original run-4 kernel verification includes five scoped zero-error Compute Sanitizer processes. A separate protected Trame/VTK EGL viewer renders the undecimated run-4 surface, with one measured 109.6 ms server-side cutaway update on T4. This engineering study demonstrates an accuracy-constrained memory/performance trade-off, not a new aerodynamic solver or global attention over all cells. Separate controls are still needed to isolate tiling, precision and graph-replay contributions.
 
 ## Research question and contribution
 
@@ -36,11 +31,11 @@ The model is NVIDIA's official `Transolver.0.501.mdlus`, accompanied by `global_
 
 | Artifact | Pinned identity |
 |---|---|
-| NVIDIA model revision | `96477aeb86d24c26ccf0797bca1b3851268017d0` |
-| Checkpoint SHA-256 | `eb98f399a050a8f8a24919335c61642e4a835bd4044f7e21abec231aa31fd82c` |
-| DrivAerML dataset revision | `5d448b209bf654503c64ce7261c34fa125f46392` |
-| NVIDIA CFD wrapper / split commit | `06846c9fbc08b8e82551841897b5294f7e5ef82d` |
-| THUML golden-reference commit | `75e0f67643806a81cd1d3f6adc88dd8c02416fe7` |
+| NVIDIA model revision | `96477aeb86d24c26 ccf0797bca1b3851 268017d0` |
+| Checkpoint SHA-256 | `eb98f399a050a8f8 a24919335c61642e 4a835bd4044f7e21 abec231aa31fd82c` |
+| DrivAerML dataset revision | `5d448b209bf65450 3c64ce7261c34fa1 25f46392` |
+| NVIDIA CFD wrapper / split commit | `06846c9fbc08b8e8 2551841897b5294f 7e5ef82d` |
+| THUML golden-reference commit | `75e0f67643806a81 cd1d3f6adc88dd8c 02416fe7` |
 
 The reference pipeline centers cell coordinates using the STL cell-center mean, scales coordinates by `[12, 4.5, 3.25]`, and appends unit cell normals. Functional inputs use density 1.205 and speed 30 according to the checkpoint wrapper convention; the reference CFD case speed is 38.889 m/s. Predictions are denormalized with published statistics and the wrapper's `1.205 × 30²` scaling. Comparison uses native `pMeanTrim` and `wallShearStressMeanTrim` arrays; pressure is a kinematic pressure quantity, not automatically pascals. No fitted pressure offset or sign correction is applied.
 
@@ -73,7 +68,7 @@ Whole-model timing includes indexing and model forward across every partition. L
 
 Memory is reported in decimal MB using PyTorch allocated and reserved counters. Allocated memory is not total process VRAM; CUDA context and other allocations can lie outside these counters. Graph pools retain reusable storage.
 
-For pressure p and prediction p-hat, reported relative L2 is `100 × ||p-hat − p||₂ / ||p||₂`, unweighted over surface cells. Wall-shear error uses the analogous vector norm. These are surrogate-versus-CFD errors, not errors against a physical experiment.
+For pressure p and prediction p-hat, reported relative L2 is $100\,\|\hat p-p\|_2/\|p\|_2$, unweighted over surface cells. Wall-shear error uses the analogous vector norm. These are surrogate-versus-CFD errors, not errors against a physical experiment.
 
 ## Ablation results
 
@@ -81,10 +76,10 @@ For pressure p and prediction p-hat, reported relative L2 is `100 × ||p-hat −
 
 | Method | Latency (ms) | Speedup vs paired FP32 | Peak allocated (MB) | Peak reserved (MB) | Pressure relative L2 (%) | Outcome |
 |---|---:|---:|---:|---:|---:|---|
-| PyTorch FP32, V3 paired baseline | 20,796.695 | 1.000 | 10,992.240 | 11,427.381 | 3.394399 | Reference |
-| CUDA V1, scalar fusion | 190,564.713 | — | 2,004.550 | Not recorded | Not recorded | Numerical gate failed |
-| CUDA V2, tiled FP32 / FP64 norms | Not run | — | — | — | — | Layer 0 speed gate failed |
-| CUDA V3, tiled TF32 / FP32 norms / graph | **17,699.752** | **1.17497** | **2,252.230** | **4,640.997** | **3.394170** | Declared V3 gates passed |
+| FP32 reference | 20,796.695 | 1.000 | 10,992.240 | 11,427.381 | 3.394399 | Reference |
+| V1 scalar | 190,564.713 | — | 2,004.550 | Not recorded | Not recorded | Numerical gate failed |
+| V2 tiled | Not run | — | — | — | — | Layer 0 speed gate failed |
+| V3 graph | **17,699.752** | **1.17497** | **2,252.230** | **4,640.997** | **3.394170** | Declared V3 gates passed |
 
 V1's separately measured FP32 baseline was 20,792.189 ms; its speedup against that baseline was 0.109108×. V3's speedup against the rounded historical 20,792 ms reference is 1.174706×. We do not mix the earlier 3A latency, which had a different measurement scope, into this table.
 
@@ -123,11 +118,11 @@ The saved V3 outputs are overlaid on the original undecimated 8,150,920-vertex s
 
 The final smoke test, on a T4, reports **0.109632665 s (109.633 ms)** for one server-side cutaway update including rendering, with 1,557 cutter cells. It is not a browser round-trip latency, sustained frame-rate measurement or H100 inference timing. GPU mapper clipping avoids copying the full clipped surface; `vtkPlaneCutter` supplies section lines. Safari inspection was subsequently confirmed complete by the user; this is separate from automated smoke verification.
 
-![Full surface and saved V3 pressure](aero-pressure.png)
+![Full surface and saved V3 pressure](aero-pressure.png){width=65%}
 
 *Figure 1. Saved surrogate pressure on the complete surface. Default percentile color limits saturate extremes; full-range mode is available. Geometry is not decimated.*
 
-![EGL cutaway](aero-cut.png)
+![EGL cutaway](aero-cut.png){width=65%}
 
 *Figure 2. Surface cutaway. The dataset contains a car boundary surface, not internal vehicle components or a volumetric boundary-layer field.*
 
@@ -140,17 +135,15 @@ Protected production-class routing retains session authentication and a 300-seco
 The experiment README records commands for each historical gate. From the repository root, with the local environment and Modal authentication configured:
 
 ```sh
-# Download the pinned checkpoint and one reference case; generate baseline VTP.
 .venv/bin/modal run experiments/transolver_lab/validate_drivaerml.py
-# Compile remotely, compare Layer 0, run scoped memchecks and gated full benchmark.
-.venv/bin/modal run experiments/transolver_lab/benchmark_drivaer_v3.py
-# Format saved measurements locally; no local GPU execution.
-.venv/bin/python experiments/transolver_lab/report_v3.py
-# Build the remote viewer image and produce EGL smoke evidence.
-.venv/bin/modal run ops/modal_private_viewer.py
-# Temporary authenticated preview, not deployment.
+.venv/bin/modal run --detach experiments/transolver_lab/publication_benchmark.py
 .venv/bin/modal serve --timeout 900 ops/modal_private_viewer.py
 ```
+
+The README also supplies the original V3 sanitizer/gate command, EGL smoke test,
+local report formatter and authenticated preview procedure. The detached publication
+job reuses completed five-sample configurations; use a new output namespace whenever
+the measurement protocol or implementation changes.
 
 Data, checkpoint and predictions persist in Modal volume `p2i-transolver-drivaerml`. The preview procedure and token handling are documented in the README. Stop its local serve process and run `modal app stop APP_ID --yes` when finished; inspect `modal container list` to confirm no active containers. Persistent volumes remain billable storage even when compute stops.
 
@@ -167,11 +160,57 @@ Data, checkpoint and predictions persist in Modal volume `p2i-transolver-drivaer
 
 Raw profiler logs, failed attempts and earlier reference results remain in the evidence directory. The V3 baseline's descriptive variant label was corrected after execution; numerical measurements were unchanged. Downloaded model/data assets are not redistributed by this source checkpoint; their original terms and attribution obligations remain applicable. Vendored THUML code retains its license.
 
+## Publication validation: three cases and repeated measurements
+
+Cases 4, 17 and 18 were selected from the pinned publisher validation split before
+examining their predictions. Each method ran in a fresh process, five sequential
+complete-case repetitions; execution order was rotated between cases. All used
+the same checkpoint, seed 42 and 200,000-cell partition convention. Original V3
+CUDA code was unchanged. This follow-up reuses the earlier scoped sanitizer evidence;
+it does not claim additional sanitizer coverage on cases 17 and 18.
+
+| Case | Method | Median ms [min, max], n=5 | Peak allocated / reserved MB | Pressure L2 % | 0.05 pp gate |
+|---|---|---:|---:|---:|---|
+| 4 | fp32 | 20737.5 [20733.6, 20761.3] | 10992.2 / 11427.4 | 3.394399 | Pass |
+| 4 | tf32 | 12614.9 [12612.1, 12617.4] | 10992.2 / 11427.4 | 3.626330 | Fail |
+| 4 | v3 | 17805.0 [17759.3, 17815.4] | 2529.8 / 5008.0 | 3.394170 | Pass |
+| 17 | fp32 | 24843.4 [24842.1, 24844.7] | 11042.1 / 11530.1 | 3.024468 | Pass |
+| 17 | tf32 | 15009.3 [15004.8, 15014.4] | 11042.1 / 11530.1 | 3.289615 | Fail |
+| 17 | v3 | 21305.2 [21211.3, 21313.1] | 2578.9 / 4972.3 | 3.023651 | Pass |
+| 18 | fp32 | 18710.1 [18709.3, 18713.5] | 10966.6 / 11360.3 | 5.782420 | Pass |
+| 18 | tf32 | 11461.5 [11460.5, 11463.1] | 10966.6 / 11360.3 | 5.943229 | Fail |
+| 18 | v3 | 16094.8 [16034.6, 16110.2] | 2504.2 / 4930.4 | 5.781841 | Pass |
+
+Memory columns use the maximum over all five repetitions, including graph-pool
+behavior across repeated runs. They must not be replaced by the smaller first-pass
+numbers. These runs test repeatability within each method process. A disconnected job was
+resumed in a second H100 allocation, retaining completed configurations; hardware
+identity across that boundary was not recorded. This is not a systematic
+cross-host variability study. Per-repetition measurements and standard deviations
+are available in the accompanying JSON files.
+
+Globally enabling TF32 is a distinct accuracy/performance trade-off, not automatically
+a valid replacement under the declared pressure gate. A same-selective-precision,
+non-tiled implementation and separate graph-only control remain untested; the
+present evidence cannot isolate the speed contribution of each optimization.
+
+Across cases 4, 17 and 18, V3 achieves 1.162–1.166× median speedup versus strict FP32 and 76.6–77.2% lower peak allocated memory using the worst of five repetitions. All three V3 pressure comparisons pass both the 0.05 percentage-point and 0.05%-relative gates. Globally TF32-enabled PyTorch is faster on every case but fails both pressure gates on each case. This is an accuracy-constrained memory/performance result, not a claim of unconditional fastest inference.
+
+V3 allocated peaks increase over the five repetitions (run 4: 2,252 to 2,530 MB; run 17: 2,302 to 2,579 MB; run 18: 2,227 to 2,504 MB). We have not established whether that growth plateaus. Consequently, no long-running service memory bound is claimed. The tiled intermediate dimensions are bounded, but repeated-process allocator behavior needs separate investigation.
+
+![Repeated-case benchmark](benchmark.png)
+
+*Figure 3. Measured inference time, maximum allocated memory and pressure error. The faster globally TF32-enabled reference does not meet the predeclared pressure-error allowance.*
+
+The complete geometry sizes are run 4: 8,150,920 vertices / 8,140,177 cells; run 17: 9,705,704 vertices / 9,680,746 cells; run 18: 7,320,829 vertices / 7,315,999 cells.
+
+Follow-up evidence: raw samples, summary, and preselected-case provenance.
+
 ## Limitations and publication readiness
 
-This draft establishes a single-case implementation result. It does not establish novelty relative to all tiled-attention literature, robust generalization, improved CFD accuracy, multi-GPU scalability, training support, or total cloud cost savings. A fair next evaluation needs repeated warmed and cold runs, matched precision baselines (including an optimized non-tiled TF32 baseline), multiple held-out geometries, pressure/force and wall-shear metrics, actual HBM profiling, and total job billing. Without those controls, the gain cannot be attributed separately to tiling, graph replay and TF32.
+The original checkpoint establishes a single-case result; the publication follow-up adds two preselected cases and repeated timing measurements. It does not establish novelty relative to all tiled-attention literature, robust generalization, improved CFD accuracy, multi-GPU scalability, training support, or total cloud cost savings. The follow-up adds globally TF32-enabled PyTorch, repeated warmed timings and multiple publisher-held-out geometries. Remaining evaluation includes cold starts, a non-tiled implementation with exactly the same selective precision, integrated aerodynamic forces, V3 HBM profiling, persistent-serving memory behavior and total job billing. Without those controls, the gain cannot be attributed separately to tiling, graph replay and TF32.
 
-The existing unchanged-FP32 baseline is a useful reproduction reference but not necessarily the fastest available PyTorch implementation. The present ablation is sequential engineering development, not a factorial experiment. A 1.175× single-case speedup and memory reduction are defensible outreach results when these qualifications accompany them. No endorsement or collaboration by NVIDIA or the dataset authors is implied.
+The existing unchanged-FP32 baseline is a useful reproduction reference but not necessarily the fastest available PyTorch implementation. The present ablation is sequential engineering development, not a factorial experiment. The measured memory/accuracy trade-off is a defensible outreach result when the comparison scope and repeated-run memory behavior accompany it. No endorsement or collaboration by NVIDIA or the dataset authors is implied.
 
 ## References
 
