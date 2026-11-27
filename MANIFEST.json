@@ -277,11 +277,11 @@
   },
   {
     "path": "docs/papers/p2i_l2_tiled_transolver_whitepaper.md",
-    "sha256": "1d776c28c6e577cd9eece82726f3920e4478d2e4397a4b680b048ca4a2ed6050"
+    "sha256": "cef067ae77dafaa4ed4d87c55040f3b29c52391bd2050878f7bf426a76f0ecc4"
   },
   {
     "path": "docs/papers/arxiv/main.pdf",
-    "sha256": "be62468e2a401c6ce1872102f69b5e91babc9fd0f0f2df3a18b6147aba47021f"
+    "sha256": "307d05a57f7edb822bb625cddae6c1cb4228193ad3099492e3429c36c26d85e8"
   },
   {
     "path": "docs/papers/arxiv/aero-pressure.png",
@@ -289,7 +289,7 @@
   },
   {
     "path": "docs/papers/arxiv/main.tex",
-    "sha256": "e7869f723ce5969f0f8ad2c5bf5beecb228dac5c2ab636718ecff8cacb9be031"
+    "sha256": "013dcdf02847aec2aee28c1da2482ec7da86346ac15657a3d3391a4cabfc3b11"
   },
   {
     "path": "docs/papers/arxiv/README.md",
@@ -321,11 +321,11 @@
   },
   {
     "path": "docs/papers/p2i-transolver-arxiv-source.zip",
-    "sha256": "9cbd80bba4029a532f0a99191a2bf469ba5ab8bbcd50f11f36b51db90fff7b9d"
+    "sha256": "3e262f481705551dc81e742e6def1f7d3fb6e75371c182b3cb1e99e0f05fe6bb"
   },
   {
     "path": "tools/release/build_transolver_paper.py",
-    "sha256": "b569df4695b84ca552651be01f69a4a8b10e9494964e6d8ad621a50ea2588feb"
+    "sha256": "c43abc37f011ce92df45ca318ff0eb6a3c028652236ba25f296af3ab422c7343"
   },
   {
     "path": "tools/release/package_transolver.py",
@@ -333,7 +333,7 @@
   },
   {
     "path": "tools/release/transolver-README.md",
-    "sha256": "6468d8fa7f93d36d2b4971156ac08c1a2a3c37ee9432a74177fff6c6f7019007"
+    "sha256": "2fbdcfa87c78f9e991f04adf8c14dcfde2040aa68bf57b1c4dd5586ea783f693"
   },
   {
     "path": "tools/release/plot_transolver.py",
@@ -341,7 +341,7 @@
   },
   {
     "path": "tools/release/transolver-LICENSE",
-    "sha256": "f921b454f136cb83b0d78fd9da606c8c54c681fcfd1e8464d17b7bc074e02e77"
+    "sha256": "9de0276623ff4117a5276913e5deffd9c4b94b9a2252caeb819b5af795449500"
   },
   {
     "path": "tools/release/transolver-NOTICE.md",

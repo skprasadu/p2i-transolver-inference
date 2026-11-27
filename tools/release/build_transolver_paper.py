@@ -56,7 +56,7 @@ subprocess.run(
         "-M",
         "title=" + title,
         "-M",
-        "author=Krishna Srinivasamurthy — Power2Idea Lab",
+        "author=Krishna Srinivasmurthy — Power2Idea Lab",
         "-M",
         "date=27 November 2026 — Technical report draft",
     ],

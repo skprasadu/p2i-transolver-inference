@@ -1,7 +1,7 @@
 # Memory-Efficient Transolver Inference on DrivAerML with Tiled Attention and CUDA Graphs
 
 **P2I Lab / Power2Idea Lab — Technical Report, draft 2, 27 November 2026**
-**Author:** Krishna Srinivasamurthy, independent engineering researcher
+**Author:** Krishna Srinivasmurthy, independent engineering researcher
 **Status:** Engineering reproduction; not peer reviewed. Authorship and release review pending.
 **Reproducibility checkpoint:** `checkpoint-2026-11-26-transolver-cuda-v3`
 

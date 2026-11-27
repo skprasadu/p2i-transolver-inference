@@ -1,7 +1,7 @@
 # P2I Transolver inference
 
 Reproducible, bounded-memory inference for NVIDIA's pretrained DrivAerML surface
-Transolver. Research engineering by Krishna Srinivasamurthy / Power2Idea Lab.
+Transolver. Research engineering by Krishna Srinivasmurthy / Power2Idea Lab.
 
 **Release candidate for review, not a claim of state-of-the-art performance.**
 The five-repeat test also observes increasing V3 allocator peaks; persistent
