@@ -1,0 +1,14 @@
+running build_ext
+building 'p2i_physics_attention_cuda' extension
+creating /app/experiments/transolver_lab/build/temp.linux-x86_64-cpython-312/app/experiments/transolver_lab/cuda
+[1/1] /usr/local/cuda/bin/nvcc --generate-dependencies-with-compile --dependency-output /app/experiments/transolver_lab/build/temp.linux-x86_64-cpython-312/app/experiments/transolver_lab/cuda/physics_attention_kernel.o.d -I/usr/local/lib/python3.12/site-packages/torch/include -I/usr/local/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -I/usr/local/cuda/include -I/usr/local/include/python3.12 -c -c /app/experiments/transolver_lab/cuda/physics_attention_kernel.cu -o /app/experiments/transolver_lab/build/temp.linux-x86_64-cpython-312/app/experiments/transolver_lab/cuda/physics_attention_kernel.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -O3 -lineinfo -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=p2i_physics_attention_cuda -D_GLIBCXX_USE_CXX11_ABI=1 -gencode=arch=compute_90,code=sm_90 -ccbin gcc -std=c++17
+creating build/lib.linux-x86_64-cpython-312
+g++ -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fstack-protector -fstack-clash-protection -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -march=x86-64-v3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -pthread -shared -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--build-id=sha1 -Wl,--exclude-libs,ALL /app/experiments/transolver_lab/build/temp.linux-x86_64-cpython-312/app/experiments/transolver_lab/cuda/physics_attention_kernel.o -L/usr/local/lib/python3.12/site-packages/torch/lib -L/usr/local/cuda/lib64 -L/install/lib -lc10 -ltorch -ltorch_cpu -ltorch_python -lcudart -lc10_cuda -ltorch_cuda -o build/lib.linux-x86_64-cpython-312/p2i_physics_attention_cuda.cpython-312-x86_64-linux-gnu.so
+copying build/lib.linux-x86_64-cpython-312/p2i_physics_attention_cuda.cpython-312-x86_64-linux-gnu.so -> 
+/usr/local/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:276: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:81.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+/usr/local/lib/python3.12/site-packages/torch/utils/cpp_extension.py:490: UserWarning: There are no g++ version bounds defined for CUDA version 12.6
+  warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+Emitting ninja build file /app/experiments/transolver_lab/build/temp.linux-x86_64-cpython-312/build.ninja...
+Compiling objects...
+Using envvar MAX_JOBS (2) as the number of workers...

@@ -1,0 +1,38 @@
+{
+  "model_revision": "96477aeb86d24c26ccf0797bca1b3851268017d0",
+  "dataset_revision": "5d448b209bf654503c64ce7261c34fa125f46392",
+  "case": 4,
+  "validation_split_source": "https://raw.githubusercontent.com/NVIDIA/physicsnemo-cfd/06846c9fbc08b8e82551841897b5294f7e5ef82d/workflows/benchmarking/drivaer_ml_files/validation.csv",
+  "files": [
+    {
+      "file": "transolver_drivaerml_surface_checkpoint/Transolver.0.501.mdlus",
+      "bytes": 39188235,
+      "sha256": "eb98f399a050a8f8a24919335c61642e4a835bd4044f7e21abec231aa31fd82c"
+    },
+    {
+      "file": "transolver_drivaerml_surface_checkpoint/global_stats.json",
+      "bytes": 1375,
+      "sha256": "c4b19eaca6158219570232ce094e6ef48b8705eb727b335441a310c7479b6b25"
+    },
+    {
+      "file": "run_4/boundary_4.vtp",
+      "bytes": 608049245,
+      "sha256": "0187e59625b980f5456f55be88c4123b00870ec7624882799c686ff9a8d97046"
+    },
+    {
+      "file": "run_4/drivaer_4.stl",
+      "bytes": 142424711,
+      "sha256": "5a858c07ecedcb424569d2d7aa99670fc23d36a6dc1c62e30664ca78d755eee0"
+    },
+    {
+      "file": "run_4/boundary_cell_area_4.npy",
+      "bytes": 32560836,
+      "sha256": "722e256d5158f4070502b03cab0e6245bea13b40483f2f2a93808eb8032365d2"
+    },
+    {
+      "file": "run_4/geo_ref_4.csv",
+      "bytes": 125,
+      "sha256": "2d363b907082f4c32c52dbea176611ea72f99b868056d3f0c718ce84f5a34aa0"
+    }
+  ]
+}

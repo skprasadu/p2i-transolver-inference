@@ -1,0 +1,54 @@
+{
+  "PyTorch": [
+    {
+      "kernel": "void at::elementwise_kernel<128, 2, void at::gpu_kernel_impl_nocast<at::BinaryFunctor<float, float, float, binary_internal::DivFunctor<float>>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      "dram_bytes": 10658913348864.0
+    },
+    {
+      "kernel": "void <unnamed>::softmax_warp_forward<float, float, float, 9, 0, 0>(T2 *, const T1 *, int, int, int, const bool *, int, bool)",
+      "dram_bytes": 5330023782912.0
+    },
+    {
+      "kernel": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize256x64x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "dram_bytes": 3957617342720.0
+    },
+    {
+      "kernel": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "dram_bytes": 3473766157824.0
+    },
+    {
+      "kernel": "sm80_xmma_gemm_f32f32_f32f32_f32_nt_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "dram_bytes": 2849830105856.0
+    },
+    {
+      "kernel": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize128x32x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "dram_bytes": 2834978362880.0
+    }
+  ],
+  "Fused-CUDA": [
+    {
+      "kernel": "nv::aggregate(const float *, const float *, const float *, const float *, const float *, float *, int, int, int)",
+      "dram_bytes": 26506439356416.0
+    },
+    {
+      "kernel": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "dram_bytes": 3416380185088.0
+    },
+    {
+      "kernel": "void at::elementwise_kernel<128, 2, void at::gpu_kernel_impl_nocast<at::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 7)]::operator ()() const::[lambda(float) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      "dram_bytes": 994978057984.0
+    },
+    {
+      "kernel": "void at::vectorized_elementwise_kernel<4, at::CUDAFunctor_add<float>, std::array<char *, 3>>(int, T2, T3)",
+      "dram_bytes": 992493794048.0
+    },
+    {
+      "kernel": "nv::reduce(const float *, float *, int)",
+      "dram_bytes": 707420793344.0
+    },
+    {
+      "kernel": "void at::vectorized_elementwise_kernel<4, at::GeluCUDAKernelImpl(at::TensorIteratorBase &, at::GeluType)::[lambda() (instance 2)]::operator ()() const::[lambda() (instance 2)]::operator ()() const::[lambda(float) (instance 1)], std::array<char *, 2>>(int, T2, T3)",
+      "dram_bytes": 694359458560.0
+    }
+  ]
+}

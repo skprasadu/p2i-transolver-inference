@@ -1,0 +1,83 @@
+{
+  "stage": "gate",
+  "vertices": 8150920,
+  "cells": 8140177,
+  "partition": 200000,
+  "config": {
+    "mode": "fp32",
+    "tile": 32768,
+    "error": 1.4066696166992188e-05,
+    "ms": 32.79564666748047
+  },
+  "max_abs_error": 2.172868698835373e-05,
+  "latency_ms": {
+    "PyTorch": 902.9520998001099,
+    "Tiled CUDA": 1336.2005462646484
+  },
+  "peak_allocated_vram_mb": {
+    "PyTorch": 10782.639616,
+    "Tiled CUDA": 2836.055552
+  },
+  "scope": "Layer0 attention across full car; same 200000-cell partitions, not global attention",
+  "passed": false,
+  "memcheck_passed": false,
+  "probe": {
+    "baseline_partition_ms": 22.042463302612305,
+    "candidates": [
+      {
+        "mode": "fp32",
+        "tile": 1024,
+        "error": 1.3977289199829102e-05,
+        "ms": 43.231231689453125
+      },
+      {
+        "mode": "fp32",
+        "tile": 4096,
+        "error": 1.4007091522216797e-05,
+        "ms": 36.20284652709961
+      },
+      {
+        "mode": "fp32",
+        "tile": 8192,
+        "error": 1.4036893844604492e-05,
+        "ms": 33.67001724243164
+      },
+      {
+        "mode": "fp32",
+        "tile": 32768,
+        "error": 1.4066696166992188e-05,
+        "ms": 32.79564666748047
+      },
+      {
+        "mode": "tf32",
+        "tile": 1024,
+        "error": 0.001082777976989746,
+        "ms": 30.13862419128418
+      },
+      {
+        "mode": "tf32",
+        "tile": 4096,
+        "error": 0.0011074542999267578,
+        "ms": 25.282880783081055
+      },
+      {
+        "mode": "tf32",
+        "tile": 8192,
+        "error": 0.0009859800338745117,
+        "ms": 23.713855743408203
+      },
+      {
+        "mode": "tf32",
+        "tile": 32768,
+        "error": 0.0008611381053924561,
+        "ms": 22.205791473388672
+      }
+    ],
+    "selected": {
+      "mode": "fp32",
+      "tile": 32768,
+      "error": 1.4066696166992188e-05,
+      "ms": 32.79564666748047
+    }
+  }
+}

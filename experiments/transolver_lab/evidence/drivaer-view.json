@@ -1,0 +1,18 @@
+{
+  "renderer": "vtkEGLRenderWindow",
+  "NVIDIA": true,
+  "vertices": 8150920,
+  "cells": 8140177,
+  "fields_checked": [
+    "Pred_Pressure",
+    "GT_Pressure",
+    "Abs_Error",
+    "Wall_Shear_Stress",
+    "Physical_Slice_ID"
+  ],
+  "geometry_decimation": false,
+  "pixel_ratios": [
+    1,
+    1
+  ]
+}

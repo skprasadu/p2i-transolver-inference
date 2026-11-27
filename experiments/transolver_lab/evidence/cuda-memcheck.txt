@@ -1,0 +1,5 @@
+========= COMPUTE-SANITIZER
+{"correctness": [{"batch": 2, "points": 37, "slice_max_abs_error": 4.76837158203125e-07, "full_max_abs_error": 1.043081283569336e-07}, {"batch": 1, "points": 1025, "slice_max_abs_error": 1.6689300537109375e-06, "full_max_abs_error": 1.341104507446289e-07}, {"batch": 1, "points": 500000, "slice_max_abs_error": 0.0008258819580078125, "full_max_abs_error": 2.8517097234725952e-06, "custom_vs_fp64_aggregation": 2.384185791015625e-06, "reference_vs_fp64_aggregation": 0.0008263587951660156}]}
+========= ERROR SUMMARY: 0 errors
+/usr/local/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:276: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:81.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))

@@ -1,0 +1,12 @@
+========= COMPUTE-SANITIZER
+Warp 1.19.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.5
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA H100 80GB HBM3" (79 GiB, sm_90, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.19.0
+Isolated trained layers 37 1.430511474609375e-06
+Isolated trained layers 1025 2.5033950805664062e-06
+Sanitizer scope: all20 layers at37/1025 real cells; first trained layer at16385 cells. Error 2.8014183044433594e-06
+========= ERROR SUMMARY: 0 errors

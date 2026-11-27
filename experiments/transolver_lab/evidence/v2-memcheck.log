@@ -1,0 +1,180 @@
+========= COMPUTE-SANITIZER
+Original golden reference 2.384185791015625e-07 7.450580596923828e-08
+512-slice clamp/division test 8.940696716308594e-08
+Warp 1.19.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.5
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA H100 80GB HBM3" (79 GiB, sm_90, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.19.0
+sanitize 0 200000 max_error 0.0
+sanitize 200000 200000 max_error 0.0
+sanitize 400000 200000 max_error 0.0
+sanitize 600000 200000 max_error 0.0
+sanitize 800000 200000 max_error 0.0
+sanitize 1000000 200000 max_error 0.0
+sanitize 1200000 200000 max_error 0.0
+sanitize 1400000 200000 max_error 0.0
+sanitize 1600000 200000 max_error 0.0
+sanitize 1800000 200000 max_error 0.0
+{
+  "stage": "sanitize",
+  "vertices": 8150920,
+  "cells": 8140177,
+  "partition": 200000,
+  "config": {
+    "mode": "fp32",
+    "tile": 32768,
+    "error": 1.4066696166992188e-05,
+    "ms": 32.639808654785156
+  },
+  "max_abs_error": 0.0,
+  "latency_ms": {
+    "PyTorch": 0.0,
+    "Tiled CUDA": 0.0
+  },
+  "peak_allocated_vram_mb": {
+    "PyTorch": 0.0,
+    "Tiled CUDA": 0.0
+  },
+  "scope": "Layer0 attention across full car; same 200000-cell partitions, not global attention",
+  "passed": false
+}
+========= ERROR SUMMARY: 0 errors
+
+========= COMPUTE-SANITIZER
+Original golden reference 2.384185791015625e-07 7.450580596923828e-08
+512-slice clamp/division test 8.940696716308594e-08
+Warp 1.19.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.5
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA H100 80GB HBM3" (79 GiB, sm_90, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.19.0
+sanitize 2000000 200000 max_error 0.0
+sanitize 2200000 200000 max_error 0.0
+sanitize 2400000 200000 max_error 0.0
+sanitize 2600000 200000 max_error 0.0
+sanitize 2800000 200000 max_error 0.0
+sanitize 3000000 200000 max_error 0.0
+sanitize 3200000 200000 max_error 0.0
+sanitize 3400000 200000 max_error 0.0
+sanitize 3600000 200000 max_error 0.0
+sanitize 3800000 200000 max_error 0.0
+{
+  "stage": "sanitize",
+  "vertices": 8150920,
+  "cells": 8140177,
+  "partition": 200000,
+  "config": {
+    "mode": "fp32",
+    "tile": 32768,
+    "error": 1.4066696166992188e-05,
+    "ms": 32.639808654785156
+  },
+  "max_abs_error": 0.0,
+  "latency_ms": {
+    "PyTorch": 0.0,
+    "Tiled CUDA": 0.0
+  },
+  "peak_allocated_vram_mb": {
+    "PyTorch": 0.0,
+    "Tiled CUDA": 0.0
+  },
+  "scope": "Layer0 attention across full car; same 200000-cell partitions, not global attention",
+  "passed": false
+}
+========= ERROR SUMMARY: 0 errors
+
+========= COMPUTE-SANITIZER
+Original golden reference 2.384185791015625e-07 7.450580596923828e-08
+512-slice clamp/division test 8.940696716308594e-08
+Warp 1.19.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.5
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA H100 80GB HBM3" (79 GiB, sm_90, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.19.0
+sanitize 4000000 200000 max_error 0.0
+sanitize 4200000 200000 max_error 0.0
+sanitize 4400000 200000 max_error 0.0
+sanitize 4600000 200000 max_error 0.0
+sanitize 4800000 200000 max_error 0.0
+sanitize 5000000 200000 max_error 0.0
+sanitize 5200000 200000 max_error 0.0
+sanitize 5400000 200000 max_error 0.0
+sanitize 5600000 200000 max_error 0.0
+sanitize 5800000 200000 max_error 0.0
+{
+  "stage": "sanitize",
+  "vertices": 8150920,
+  "cells": 8140177,
+  "partition": 200000,
+  "config": {
+    "mode": "fp32",
+    "tile": 32768,
+    "error": 1.4066696166992188e-05,
+    "ms": 32.639808654785156
+  },
+  "max_abs_error": 0.0,
+  "latency_ms": {
+    "PyTorch": 0.0,
+    "Tiled CUDA": 0.0
+  },
+  "peak_allocated_vram_mb": {
+    "PyTorch": 0.0,
+    "Tiled CUDA": 0.0
+  },
+  "scope": "Layer0 attention across full car; same 200000-cell partitions, not global attention",
+  "passed": false
+}
+========= ERROR SUMMARY: 0 errors
+
+========= COMPUTE-SANITIZER
+Original golden reference 2.384185791015625e-07 7.450580596923828e-08
+512-slice clamp/division test 8.940696716308594e-08
+Warp 1.19.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.5
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA H100 80GB HBM3" (79 GiB, sm_90, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.19.0
+sanitize 6000000 200000 max_error 0.0
+sanitize 6200000 200000 max_error 0.0
+sanitize 6400000 200000 max_error 0.0
+sanitize 6600000 200000 max_error 0.0
+sanitize 6800000 200000 max_error 0.0
+sanitize 7000000 200000 max_error 0.0
+sanitize 7200000 200000 max_error 0.0
+sanitize 7400000 200000 max_error 0.0
+sanitize 7600000 200000 max_error 0.0
+sanitize 7800000 200000 max_error 0.0
+sanitize 8000000 140177 max_error 0.0
+{
+  "stage": "sanitize",
+  "vertices": 8150920,
+  "cells": 8140177,
+  "partition": 200000,
+  "config": {
+    "mode": "fp32",
+    "tile": 32768,
+    "error": 1.4066696166992188e-05,
+    "ms": 32.639808654785156
+  },
+  "max_abs_error": 0.0,
+  "latency_ms": {
+    "PyTorch": 0.0,
+    "Tiled CUDA": 0.0
+  },
+  "peak_allocated_vram_mb": {
+    "PyTorch": 0.0,
+    "Tiled CUDA": 0.0
+  },
+  "scope": "Layer0 attention across full car; same 200000-cell partitions, not global attention",
+  "passed": false
+}
+========= ERROR SUMMARY: 0 errors

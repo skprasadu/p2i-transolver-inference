@@ -1,0 +1,97 @@
+{
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "torch": "2.7.1+cu126",
+  "correctness": [
+    {
+      "batch": 2,
+      "points": 37,
+      "slice_max_abs_error": 4.76837158203125e-07,
+      "full_max_abs_error": 1.043081283569336e-07
+    },
+    {
+      "batch": 1,
+      "points": 1025,
+      "slice_max_abs_error": 1.6689300537109375e-06,
+      "full_max_abs_error": 1.341104507446289e-07
+    },
+    {
+      "batch": 1,
+      "points": 500000,
+      "slice_max_abs_error": 0.0008258819580078125,
+      "full_max_abs_error": 2.8517097234725952e-06,
+      "custom_vs_fp64_aggregation": 2.384185791015625e-06,
+      "reference_vs_fp64_aggregation": 0.0008263587951660156
+    }
+  ],
+  "benchmarks": {
+    "PyTorch slice": {
+      "median_ms": 20.07108783721924,
+      "samples_ms": [
+        22.48192024230957,
+        20.074176788330078,
+        20.069536209106445,
+        20.048351287841797,
+        20.094463348388672,
+        20.07263946533203,
+        20.06947135925293,
+        20.05615997314453,
+        20.076223373413086,
+        20.05504035949707
+      ],
+      "incremental_peak_MB": 2048.0,
+      "effective_logical_GB_s": 102.04468041846614
+    },
+    "Custom CUDA slice": {
+      "median_ms": 76.0353889465332,
+      "samples_ms": [
+        77.80534362792969,
+        75.38015747070312,
+        76.03580474853516,
+        76.0895004272461,
+        75.34172821044922,
+        75.37718200683594,
+        76.03072357177734,
+        76.03667449951172,
+        76.03497314453125,
+        76.03689575195312
+      ],
+      "incremental_peak_MB": 65.226752,
+      "effective_logical_GB_s": 26.936769475069337
+    },
+    "PyTorch full block": {
+      "median_ms": 23.986703872680664,
+      "samples_ms": [
+        25.860960006713867,
+        23.990495681762695,
+        24.016191482543945,
+        23.985248565673828,
+        23.9881591796875,
+        23.980064392089844,
+        23.989503860473633,
+        23.981664657592773,
+        23.969152450561523,
+        23.97203254699707
+      ],
+      "incremental_peak_MB": 4102.91968
+    },
+    "Custom CUDA full block": {
+      "median_ms": 153.59546661376953,
+      "samples_ms": [
+        155.8804168701172,
+        152.90573120117188,
+        152.95738220214844,
+        152.870361328125,
+        153.59494018554688,
+        153.60060119628906,
+        152.96351623535156,
+        153.6033935546875,
+        153.6134033203125,
+        153.5959930419922
+      ],
+      "incremental_peak_MB": 4103.704064
+    }
+  },
+  "logical_slice_bytes": 2048147744,
+  "bandwidth_definition": "logical input+output bytes / median time; NOT profiler-measured DRAM bandwidth",
+  "scope": "FP32 inference only; D=M=64, heads=8, input channels=3. Recompute weights for deslicing; no global BHNM tensor."
+}

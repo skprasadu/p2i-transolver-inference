@@ -1,0 +1,282 @@
+[
+  {
+    "path": "experiments/transolver_lab/ref_physics_attention.py",
+    "sha256": "c81c68f43e7321f95cc0908ef3f7c43d93b5a1cf06282ed4c570baa6a8c1c6dd"
+  },
+  {
+    "path": "experiments/transolver_lab/publication_benchmark.py",
+    "sha256": "031affe52558abf45349d8cd3ff9b806849fc496b51bde1130ca19d4bc8595e1"
+  },
+  {
+    "path": "experiments/transolver_lab/benchmark_drivaer_cuda.py",
+    "sha256": "2db5dc2af8f85abedacc13be73c3ee1e16e5e859af2a85a526415a584dc89eb5"
+  },
+  {
+    "path": "experiments/transolver_lab/publication_worker.py",
+    "sha256": "d87cfe8fd5029491a2b81fe4bc64aee63c07ff6c9d02b5f7fd391f819cac7584"
+  },
+  {
+    "path": "experiments/transolver_lab/benchmark_drivaer_v2.py",
+    "sha256": "5bf35e21021e97e325f7cadf096a75a7bb7abcef5fbb2d02ea14f069d0b3d889"
+  },
+  {
+    "path": "experiments/transolver_lab/viewer.py",
+    "sha256": "f067c6d40fc315fd593bec3ed4199434cb772fb6e4c0f7ac0ed2033dbccdafc5"
+  },
+  {
+    "path": "experiments/transolver_lab/validate_drivaerml.py",
+    "sha256": "e7a35e65beec5602a6a8a07f56edab8ffef7ee274851e6a5ee27fa0a238800d7"
+  },
+  {
+    "path": "experiments/transolver_lab/benchmark_drivaer_v3.py",
+    "sha256": "3735c8dfc160db2948ee616383c681673d319a92e13748a02938f100c674dcad"
+  },
+  {
+    "path": "experiments/transolver_lab/drivaer_v2_worker.py",
+    "sha256": "0936734d6d2c0bb98dbc8d942ac155af79fd4092da7e20db107b4962bc4f0192"
+  },
+  {
+    "path": "experiments/transolver_lab/tiled_attention_v3.py",
+    "sha256": "49eb98031798cf9eea58fb28f704cd52533bc8071becae397d2be6b81275712e"
+  },
+  {
+    "path": "experiments/transolver_lab/drivaer_worker.py",
+    "sha256": "7e61b5195bb9df4f80dd0abb3536fb418248f3eb08d31527716313d60edc0440"
+  },
+  {
+    "path": "experiments/transolver_lab/tiled_attention_v2.py",
+    "sha256": "e91fe4bc96bf02029912b0fb738860a986e6a83f91b0091894b3b6b5ffe70e9d"
+  },
+  {
+    "path": "experiments/transolver_lab/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "experiments/transolver_lab/workload.py",
+    "sha256": "aa1e78391c1ba249daaa9a8bb5865f84195ed2da25fadd801f2e228829b7ce55"
+  },
+  {
+    "path": "experiments/transolver_lab/drivaer_viewer.py",
+    "sha256": "4a775775828e8a50617c3e7dc0d784b6fe545fab0e017352f1b21d29a8d0fe98"
+  },
+  {
+    "path": "experiments/transolver_lab/drivaer_v3_worker.py",
+    "sha256": "1528ccf776b42ba0fc6c38a7c41770f20773fbd73b00f5009a494bb3007f0b10"
+  },
+  {
+    "path": "experiments/transolver_lab/setup.py",
+    "sha256": "0bde3998ddceba93320b5009b995db29913b0697af4b8ae5df2d73987d1348e3"
+  },
+  {
+    "path": "experiments/transolver_lab/drivaer_cuda_worker.py",
+    "sha256": "15cf8f1682c01c76bffa301c3a438a4c0855ee32053e330aa828fd2dcdea6892"
+  },
+  {
+    "path": "experiments/transolver_lab/check_reference_repeat.py",
+    "sha256": "9c6d9e1b32e7d601a3ce8ef45d415589c691679f2fe9dd9a3e48cf2a691ffc06"
+  },
+  {
+    "path": "experiments/transolver_lab/test_cuda_kernel.py",
+    "sha256": "73acb4993814ee497cb4165faeda67b1544b9c5e88d13d137e256b381ce8f007"
+  },
+  {
+    "path": "experiments/transolver_lab/profile_drivaer_cuda.py",
+    "sha256": "9a0ccb3951f06b15beb2fa38a77aa4b9cd1bb4e9859d50547a9ba26fdcc03de2"
+  },
+  {
+    "path": "experiments/transolver_lab/report_v3.py",
+    "sha256": "32956f723117e95610a12875f8da7af817c5fe41b313e052cf75c25f74d03e85"
+  },
+  {
+    "path": "experiments/transolver_lab/publication_report.py",
+    "sha256": "7d695d74484a836110254e2e5b5bb38dd53df539449b38eda15e06f8204bccbf"
+  },
+  {
+    "path": "experiments/transolver_lab/cuda/physics_attention_kernel.cu",
+    "sha256": "4879374eb9b40bf87075999796c21e1a61c189bf39477c64c662400a07ce1b0a"
+  },
+  {
+    "path": "experiments/transolver_lab/cuda/setup_v2.py",
+    "sha256": "5954b3e182820766d94b95d39a934f214e9f9bc2ce66bcdc4cee1c4dd46c992f"
+  },
+  {
+    "path": "experiments/transolver_lab/cuda/tiled_softmax.cu",
+    "sha256": "3716aea5567639f2d53e9eb5c64f96298e4fc563f3bf7b83afc4f2ebfad218a2"
+  },
+  {
+    "path": "experiments/transolver_lab/upstream/LICENSE",
+    "sha256": "2c919cd03fa823bf7eefc00a957ff8324c865cd22aa5285e563dc4b558084f25"
+  },
+  {
+    "path": "experiments/transolver_lab/upstream/Physics_Attention.py",
+    "sha256": "f7feffd40e21863a2bd5809d9548a3417a7221a817f9e675ea969712c1d45a36"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/v2-initial-gate.json",
+    "sha256": "ede470be194d6227ca023c86930f211da869532e40a68a70334ca817e17f9e77"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/v3-results.json",
+    "sha256": "5655e9649ce5316db9fc23785bd854ea2af158e4f66d4a132f8d0a73e4888aa7"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/drivaer-cuda-sanitizer-attempt.log",
+    "sha256": "ea30f79b79de57354bc5ac73b935865f1361f60a0d3a7baadf008da7878815b0"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/preview.png",
+    "sha256": "58edc44a2571af5cbc0970feea48e7547bfa743293e7277e38634a931dcedc98"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/v2-gate.json",
+    "sha256": "59bbc423e8f25a70321e4ab8fb06d5cd7417a866e9d334469a7f7a569471f5de"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/reference-repeat.json",
+    "sha256": "9c516302bfc62f59978d1214f5c7a6981150c73608ae17804c7eaadc2adaab06"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/drivaer-view.json",
+    "sha256": "3b962bdc7c4b06209b87a24ebbed9f78f719387bf57c53f10251ce3cc2a417d6"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/memcheck.txt",
+    "sha256": "ec6ae91053e006cbacc68c68f3316144fd40d03c22415225c16444e589e7634d"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/drivaer-provenance.json",
+    "sha256": "c87dd0c09bf167c177242060783209c703c4fa18fef8bb8283d35c13a990f2fd"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/drivaer-cuda-memcheck.log",
+    "sha256": "231a403013ce1f22c5bb0f92d309d8a6ce1d4c39813a3133ec6e561cd4a85e15"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/benchmark.json",
+    "sha256": "971f58be50881b93feeea051e96d305e84a73b29c73678cbba5df44c9287a8bd"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/hbm-kernel-breakdown.json",
+    "sha256": "1353ba529f54a4d0ea39c9caf503ca8cffab86c39fcb3ef9bacdd8b9b1ec1cbd"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/cuda-benchmark.json",
+    "sha256": "ed9d27e2f614a3f39e5dbaf5dec37d4d6d30c0ef185bbb6f52d183aca890096c"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/cuda-memcheck.txt",
+    "sha256": "f21fcc29cd8d3e76d4d019e6c43a1c75a1676c0c7f061c3cc59ddedf78c39c18"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/drivaer-view.png",
+    "sha256": "d4380c835de15b34e066777e451b55d4a03db72106301ea999cf4a6e02489b63"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/cuda-build.txt",
+    "sha256": "70fa92790c672cbb1b56328145d3cc8596a9b8cf08d7e45f7b298161bb9e58cd"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/hbm-PyTorch.log",
+    "sha256": "e54a75ccffe16debda6a83bf36a7ae243f9f24fa6e438d5f298ef40eb3497efd"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/drivaer-cuda-benchmark.json",
+    "sha256": "34fef6e24f20f13e105c2a12fd3c965b8f6ad58fe6f388d4be821fb9cd64c2eb"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/v2-initial-memcheck.log",
+    "sha256": "209a7b103216df1f10d10cabc7916d26d3bfe4ecdb15de1adfa6c375a29f1d72"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/drivaer-validation.json",
+    "sha256": "fda7de22dfca42656b57d51fe535198033eee3686c3eb16ef1e7af49904cbfce"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/v2-memcheck.log",
+    "sha256": "f3ab3c5d8b409f6faf7d9ed3661d76fe2822d0d146cec8f52d15180000027d29"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/hbm-Fused-CUDA.log",
+    "sha256": "a05f94cf730264849d0939562f8c4c80f62ec567d0017dd12fc00d9e07c76735"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/SHA256SUMS",
+    "sha256": "bef3fba3bb702b638937d7e569d1d4f10b413d04398ea9593211a7bf05e6c3f6"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/v3-memcheck.log",
+    "sha256": "6f67c1cb74ebedef19f840399786ec863aea0f116a5b53ed603b04fb99a2e824"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/preview.json",
+    "sha256": "3f7311258f6477d359c9b23629e4aa7856def402bf59ff37e09f5307a17caea8"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/publication/provenance.json",
+    "sha256": "e27dcfd7d5d0a4251939dbac94b911bdc4a247186dffe39b87100ae7a0b07b2a"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/viewer/aero-pressure.png",
+    "sha256": "3cd9e24b9455e5368853c5745c389c0a2210f258fbbbee9be19306932379ac1a"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/viewer/aero-smoke.json",
+    "sha256": "1bc7e0293714367804d5d0e28eb4a0c580fc49254f9d40a8f6fcc8cdef8dc855"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/viewer/aero-cad.png",
+    "sha256": "79a8b1a71abf81f154e69a470579b0c31f24a7f805ebab6f836d1b7a7f0e9118"
+  },
+  {
+    "path": "experiments/transolver_lab/evidence/viewer/aero-cut.png",
+    "sha256": "0387e0f6d656340c528c890fa34d66c9fc306e0a0d14a55a93d58a97ccd6ca36"
+  },
+  {
+    "path": "docs/checkpoints/2026-11-26-transolver-3b.md",
+    "sha256": "b304d755b8143e209318f85ae8a46e1e7f44be21e459d3e1a6d50ee090bdb333"
+  },
+  {
+    "path": "docs/checkpoints/2026-11-26-transolver-reference.md",
+    "sha256": "e5b68d75b99de1c632976ef539ef4984c2d7855eaa96475fa01d8f0da17972ea"
+  },
+  {
+    "path": "docs/checkpoints/2026-11-26-transolver-step4-viewer.md",
+    "sha256": "0731d0df1c11fbef20c7ed4745c0739a74231ff120c71f02262b17377f3bb5e6"
+  },
+  {
+    "path": "docs/checkpoints/2026-11-26-transolver-pretrained-discovery.md",
+    "sha256": "23d9bf0a387b6f68f30395b190e4e060052863db6aa294982e91406005dbf24e"
+  },
+  {
+    "path": "docs/checkpoints/2026-11-26-transolver-cuda.md",
+    "sha256": "9867b7596a57025a3fa4b11d241bd2a7b91fb29ec8a8b31867ccc09ada35958b"
+  },
+  {
+    "path": "docs/checkpoints/2026-11-26-transolver-3b-v3.md",
+    "sha256": "fea596b43f62e4cad5499ae8d5f16cf51b139c20001d114bc8c0468fd96f5fe9"
+  },
+  {
+    "path": "docs/checkpoints/2026-11-26-transolver-3b-v2.md",
+    "sha256": "cb2ba43459f0b97cac3b99ca63383e07e01ccb9f12943044aad26d004f751f52"
+  },
+  {
+    "path": "docs/papers/p2i_l2_tiled_transolver_whitepaper.md",
+    "sha256": "ae61cef27136b7dd47b39a1e5a9037b76e6144dca170ed01c8b15fa9c86d3ac6"
+  },
+  {
+    "path": "docs/papers/arxiv/aero-pressure.png",
+    "sha256": "3cd9e24b9455e5368853c5745c389c0a2210f258fbbbee9be19306932379ac1a"
+  },
+  {
+    "path": "docs/papers/arxiv/main.tex",
+    "sha256": "b12275a4858f0449c96c140ff68202b4bbb24a2e142a42794269c39473abf326"
+  },
+  {
+    "path": "docs/papers/arxiv/manuscript.md",
+    "sha256": "f7257d420eaf956e40118b6f40adcde0d9e252479b4fcf74393edcf3cb1b7da2"
+  },
+  {
+    "path": "docs/papers/arxiv/aero-cut.png",
+    "sha256": "0387e0f6d656340c528c890fa34d66c9fc306e0a0d14a55a93d58a97ccd6ca36"
+  }
+]

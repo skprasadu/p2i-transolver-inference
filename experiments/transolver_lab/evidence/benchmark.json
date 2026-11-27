@@ -1,0 +1,52 @@
+{
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "batch": 1,
+  "points": 500000,
+  "input_channels": 3,
+  "heads": 8,
+  "head_dim": 64,
+  "slices_per_head": 64,
+  "dtype": "float32",
+  "training": false,
+  "tf32": false,
+  "warmups": 3,
+  "repetitions": 10,
+  "cuda_event_ms": [
+    26.229087829589844,
+    24.1779842376709,
+    24.210336685180664,
+    24.184160232543945,
+    24.224767684936523,
+    24.12006378173828,
+    24.095584869384766,
+    24.10767936706543,
+    24.094560623168945,
+    24.087711334228516
+  ],
+  "median_cuda_event_ms": 24.14902400970459,
+  "synchronized_wall_ms": [
+    26.279760999999624,
+    24.202829999998343,
+    24.23261599999904,
+    24.205909999999164,
+    24.245607999999308,
+    24.140662000000646,
+    24.115754000000322,
+    24.130153000001542,
+    24.115742999999412,
+    24.108968000000175
+  ],
+  "median_wall_ms": 24.171745999999494,
+  "peak_allocated_MB": 4142.56384,
+  "peak_reserved_MB": 4154.458112,
+  "memory_definition": "decimal MB; PyTorch allocator, including input/model; excludes CUDA context",
+  "equivalence": {
+    "max_abs_error_fp32": 0.0,
+    "threshold": 0.0001,
+    "points": 4096
+  },
+  "scope": "one untrained attention block; no CFD solve or training/backward",
+  "sanitizer": "ERROR SUMMARY: 0 errors (4096-point forward equivalence case)"
+}

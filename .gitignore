@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.so
+build/
+.venv/
+.env*
+*.npz
+*.npy
+*.mdlus
+.DS_Store

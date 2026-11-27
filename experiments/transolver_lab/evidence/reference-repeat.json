@@ -1,0 +1,6 @@
+{
+  "same_input_repeat_max_abs_error": 0.0,
+  "cells": 200000,
+  "seed": 42,
+  "gpu": "NVIDIA H100 80GB HBM3"
+}

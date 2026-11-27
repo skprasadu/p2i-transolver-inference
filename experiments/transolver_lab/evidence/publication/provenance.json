@@ -1,0 +1,42 @@
+{
+  "cases": [
+    4,
+    17,
+    18
+  ],
+  "dataset_revision": "5d448b209bf654503c64ce7261c34fa125f46392",
+  "split_source": "https://raw.githubusercontent.com/NVIDIA/physicsnemo-cfd/06846c9fbc08b8e82551841897b5294f7e5ef82d/workflows/benchmarking/drivaer_ml_files/validation.csv",
+  "selection": "run4 plus first two other validation IDs sorted numerically; no outcome-based selection",
+  "files": [
+    {
+      "file": "run_4/boundary_4.vtp",
+      "bytes": 608049245,
+      "sha256": "0187e59625b980f5456f55be88c4123b00870ec7624882799c686ff9a8d97046"
+    },
+    {
+      "file": "run_4/drivaer_4.stl",
+      "bytes": 142424711,
+      "sha256": "5a858c07ecedcb424569d2d7aa99670fc23d36a6dc1c62e30664ca78d755eee0"
+    },
+    {
+      "file": "run_17/boundary_17.vtp",
+      "bytes": 723457133,
+      "sha256": "9164fe2cc8267ae17cd5ed7c185e937e61c29c6e0597b6450864e93230c46aa6"
+    },
+    {
+      "file": "run_17/drivaer_17.stl",
+      "bytes": 142302196,
+      "sha256": "c10843b7b00f2ebfe37f8b3cd54445777244c83700ed5f8cdc552ff85e528792"
+    },
+    {
+      "file": "run_18/boundary_18.vtp",
+      "bytes": 546353515,
+      "sha256": "c142926668790f735e8e7fea48490ad864b5ec35422b41242993629258c0e2db"
+    },
+    {
+      "file": "run_18/drivaer_18.stl",
+      "bytes": 142485228,
+      "sha256": "6a3a20ddacf3b7c50a47a0699040412b3297fe945fb1d517b5e1fab5c92b5ad1"
+    }
+  ]
+}

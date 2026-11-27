@@ -1,0 +1,22 @@
+{
+  "gpu": "OpenGL renderer string:  Tesla T4/PCIe/SSE2",
+  "vertices": 8150920,
+  "cells": 8140177,
+  "pressure_l2_percent": 3.3941697359322363,
+  "modes": [
+    "cad",
+    "pressure",
+    "cp",
+    "gt",
+    "error",
+    "shear",
+    "slices"
+  ],
+  "cutter_cells": 1557,
+  "pixel_ratios": [
+    1,
+    1
+  ],
+  "geometry_decimated": false,
+  "cut_update_seconds": 0.10963266499999946
+}

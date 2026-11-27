@@ -1,0 +1,17 @@
+{
+  "renderer": "vtkEGLRenderWindow",
+  "nvidia": true,
+  "points": 500000,
+  "gpu": "NVIDIA L4",
+  "dominant_slices_per_head": [
+    6,
+    6,
+    4,
+    3,
+    5,
+    8,
+    3,
+    7
+  ],
+  "scope": "untrained seed 42 assignments; not pressure or stress"
+}
